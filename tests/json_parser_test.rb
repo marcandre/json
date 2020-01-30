@@ -304,6 +304,10 @@ EOT
     json = '["\\\'"]'
     data = ["'"]
     assert_equal data, parse(json)
+
+    json = '["\/"]'
+    data = [ '/' ]
+    assert_equal data, parse(json)
   end
 
   class SubArray < Array
