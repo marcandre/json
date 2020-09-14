@@ -392,12 +392,12 @@ EOT
 
   class SubOpenStruct < OpenStruct
     def [](k)
-      __send__(k)
+      super
     end
 
     def []=(k, v)
       @item_set = true
-      __send__("#{k}=", v)
+      super
     end
 
     def item_set?
